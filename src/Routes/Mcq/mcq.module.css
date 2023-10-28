@@ -1,0 +1,16 @@
+.main{
+    padding-top: 30px;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+}
+.questionOuter{
+    text-align: center;
+    text-decoration: 2px solid underline;
+    width: min(700px,90vw);
+}
+.question{
+    font-size: 19px;
+}

@@ -1,0 +1,21 @@
+.main{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner{
+    
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: max-content max-content;
+}
+.dividingLine{
+    
+    width: 4px ;
+    border-radius: 10px;
+    margin: 2px 4px;
+    height: 100%;
+    background-color: rgb(255, 214, 220);
+}
