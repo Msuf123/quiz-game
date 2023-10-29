@@ -7,9 +7,10 @@ import { Provider } from 'react-redux';
 import question from './Routes/Mcq/Reducer/reducer'
 import { configureStore } from '@reduxjs/toolkit';
 import selected from './Routes/Mcq/Options/selected';
+import arrayOfFinalSelectedOptions from './Routes/Mcq/Options/final';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const store=configureStore({reducer:{questions:question,selected:selected}})
+const store=configureStore({reducer:{questions:question,selected:selected,userChoice:arrayOfFinalSelectedOptions}})
 root.render(
   <Provider store={store}>
     <App />
