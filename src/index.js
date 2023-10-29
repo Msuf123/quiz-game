@@ -6,9 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import question from './Routes/Mcq/Reducer/reducer'
 import { configureStore } from '@reduxjs/toolkit';
+import selected from './Routes/Mcq/Options/selected';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const store=configureStore({reducer:{questions:question}})
+const store=configureStore({reducer:{questions:question,selected:selected}})
 root.render(
   <Provider store={store}>
     <App />
