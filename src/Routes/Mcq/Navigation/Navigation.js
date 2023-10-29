@@ -22,7 +22,8 @@ export default function Navigation(){
                 dispatch(addUserchoice({questionNumber:current.number,selectedChoice:currentSelectedOption}))
                 nav(`/${Number(current.number)+1}`)
             }}>Next</button>:null}
-            {totalNumberOfQuestions==current.number?<button onClick={()=>{nav('/final')}}>Submit</button>:null}
+            {totalNumberOfQuestions==current.number?<button onClick={()=>{dispatch(addUserchoice({questionNumber:current.number,selectedChoice:currentSelectedOption}))
+                nav('/final')}}>Submit</button>:null}
         </div>
     )
 }
