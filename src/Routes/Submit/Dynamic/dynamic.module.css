@@ -1,11 +1,19 @@
 .main{
-    border: 2px solid black;
+    
     display: flex;
     width: min(1000px,95%);
     margin: auto;
     align-items: center;
     justify-content: space-around;
 }
+@media only screen and (max-width:746px) {
+    .main{
+        flex-direction: column;
+    }
+    
+}
+
+
 .matchingresult{
     
     display: flex;
@@ -25,4 +33,35 @@
 .matchingresultInnerHeading{
     font-weight: 640;
     
+}
+.finalResult{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scoreInPercentage{
+    font-size: 23px;
+    font-weight: 650;
+    color: rgb(238, 127, 145);
+    
+}
+.correctAnswer{
+    color:  rgb(51, 172, 51);
+    font-weight: 610;
+
+}
+.unattempted{
+    color: rgb(138, 138, 247);
+    font-family: 610;
+}
+@media only screen and (max-width:746px) {
+    .matchingresult{
+        order: 2;
+        margin-top: 30px;
+    }
+    .finalResult{
+        order: 1;
+        
+    }
 }

@@ -28,10 +28,10 @@ export default function Dynamic(){
                     </ul>
                 </div>
             </div>
-            <div>
-                <span>Your Score is :{Math.round((correctOption/listOfActualOption.length)*100)}%</span>
-                <span>Number of correctAnswer:{correctOption}</span>
-                <span>Number of unattemptedOption:{unattemptedOption}</span>
+            <div className={style.finalResult}>
+                <span className={style.scoreInPercentage}>Your Score is :{Math.round((correctOption/listOfActualOption.length)*100)}%</span>
+                <span className={style.correctAnswer}>Number of correct answer:{correctOption}</span>
+                <span className={style.unattempted}>Number of unattempted option:{unattemptedOption}</span>
             </div>
         </div>
     )
