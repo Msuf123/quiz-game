@@ -12,7 +12,7 @@ export default function Navigation(){
     const totalNumberOfQuestions=numberOfQuestion.length
     return(
         <div className={style.main}>
-            {1<current.number?<button onClick={()=>nav(`/${Number(current.number)-1}`)}>Back</button>:null}
+    
             {totalNumberOfQuestions>current.number?
             <button onClick={()=>{
                 dispatch(addUserchoice({questionNumber:current.number,selectedChoice:currentSelectedOption}))

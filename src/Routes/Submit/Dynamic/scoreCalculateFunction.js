@@ -1,15 +1,15 @@
-export default function scoreCalculateFunction(listOfActualOption,correctedOption){
+export default function scoreCalculateFunction(listOfActualOptionUserSelected,correctedOption){
     let correctCount=0;
     let unAttemptedQuestion=0;
-    console.log(listOfActualOption,correctedOption)
-    for(let i=0;i<listOfActualOption.length;i++){
-       
+    console.log(listOfActualOptionUserSelected,correctedOption)
+    for(let i=0;i<listOfActualOptionUserSelected.length;i++){
+        console.log(listOfActualOptionUserSelected[i].selectedChoice)
         
-        if(listOfActualOption[i].selectedChoice===correctedOption[i].correctOption){
+        if(listOfActualOptionUserSelected[i].selectedChoice===correctedOption[i].correctOption){
            
             correctCount++;
         }
-        else if(correctedOption[i].selectedChoice===undefined){
+        else if(listOfActualOptionUserSelected[i].selectedChoice===null){
             unAttemptedQuestion++
          
         }

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const selectedAnswer=createSlice({
     name:'selected',
-    initialState:null,
+    initialState:'Not Selected',
     reducers:{
         select:(state,action)=>{
             return action.payload
