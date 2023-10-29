@@ -5,6 +5,7 @@ import style from './mcq.module.css'
 import { useParams } from "react-router-dom"
 import { addUserchoice } from "../Mcq/Options/final"
 import { select } from '../Mcq/Options/selected'
+import { useEffect } from "react"
 export default function Mcq(){
     
     const totalData=useSelector((state)=>state.questions)
@@ -12,8 +13,9 @@ export default function Mcq(){
     const question=totalData[Number(currentQuestionNumber.number)-1]
     const dispatch=useDispatch()
     const current=useParams()
+    useEffect(()=>{
     dispatch(addUserchoice({questionNumber:current.number,selectedChoice:null}))
-    dispatch(select(null))
+    dispatch(select(null))},[])
     return(
         <div className={style.main}>
             <div className={style.questionOuter}>

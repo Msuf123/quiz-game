@@ -11,9 +11,9 @@ export default function Navigation(){
     const current=useParams()
     const dispatch=useDispatch()
     const totalNumberOfQuestions=numberOfQuestion.length
-    useEffect(()=>{
-        console.log(currentFinalSelected)
-    })
+    // useEffect(()=>{
+    //     console.log(currentFinalSelected)
+    // })
     return(
         <div className={style.main}>
             {1<current.number?<button onClick={()=>nav(`/${Number(current.number)-1}`)}>Back</button>:null}
