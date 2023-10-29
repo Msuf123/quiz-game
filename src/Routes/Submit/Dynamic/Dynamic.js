@@ -15,16 +15,16 @@ export default function Dynamic(){
     return(
         <div className={style.main}>
             <div className={style.matchingresult}>
-                <div>
-                   <span>Options You choosed:</span>
+                <div className={style.matchingresultInner}>
+                   <span className={style.matchingresultInnerHeading}>Options You choosed:</span>
                    <ul>
-                     {userSelectedOption.map((i,k)=><li key={k}>Q{i.questionNumber}{i.selectedChoice===null?'Not Selected':i.selectedChoice}</li>)}
+                     {userSelectedOption.map((i,k)=><li key={k}>Q{i.questionNumber}{i.selectedChoice===null?'\)'+'Not Selected':'\)'+i.selectedChoice}</li>)}
                    </ul>
                 </div>
-                <div>
-                    <span>Actual corret option were:</span>
+                <div className={style.matchingresultInner}>
+                    <span className={style.matchingresultInnerHeading}>Actual corret option were:</span>
                     <ul>
-                        {listOfActualOption.map((i,k)=><li key={k+1}>Q{k}{i.correctOption}</li>)}
+                        {listOfActualOption.map((i,k)=><li key={k}>Q{k+1}{'\)'+i.correctOption}</li>)}
                     </ul>
                 </div>
             </div>

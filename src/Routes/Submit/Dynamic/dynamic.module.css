@@ -7,7 +7,22 @@
     justify-content: space-around;
 }
 .matchingresult{
-    border: 2px solid black;
+    
     display: flex;
     flex-direction: row;
+}
+.matchingresultInner{
+ margin: 0px 10px;
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+}
+.matchingresultInner span{
+  
+    text-align: center;
+    width: max-content;
+}
+.matchingresultInnerHeading{
+    font-weight: 640;
+    
 }
