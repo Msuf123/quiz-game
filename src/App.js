@@ -4,12 +4,14 @@ import { Route, Router, RouterProvider, createBrowserRouter, createRoutesFromEle
 import Root from './Routes/Root/Root';
 import Mcq from './Routes/Mcq/Mcq';
 import Index from './Routes/Index/Index';
+import Submit from './Routes/Submit/Submit';
 
 function App() {
   const router=createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={<Root></Root>}>
       <Route index element={<Index></Index>}></Route>
        <Route path='/:number' element={<Mcq></Mcq>}></Route>
+       <Route path='/final' element={<Submit></Submit>}></Route>
     </Route>
   ))
   return (
