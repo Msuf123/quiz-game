@@ -1,9 +1,10 @@
 export default function Rules(){
     return(
         <div>
-            <span>Rules are</span>
+            <span style={{textAlign:'center',display:'block'}}>Rules are</span>
             <ul>
                 <li>Do not cheat</li>
+                <li>Do not refresh the browser</li>
             </ul>
         </div>
     )

@@ -15,7 +15,7 @@ export default function Mcq(){
     const current=useParams()
     useEffect(()=>{
     dispatch(addUserchoice({questionNumber:current.number,selectedChoice:null}))
-    dispatch(select(null))},[])
+    dispatch(select(null))})
     return(
         <div className={style.main}>
             <div className={style.questionOuter}>
