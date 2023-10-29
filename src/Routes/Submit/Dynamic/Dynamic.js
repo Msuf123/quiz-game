@@ -11,13 +11,13 @@ export default function Dynamic(){
                 <div>
                    <span>Options You choosed:</span>
                    <ul>
-                     {userSelectedOption.map((i,k)=><l1>Q{i.questionNumber}{i.selectedChoice}</l1>)}
+                     {userSelectedOption.map((i,k)=><li key={k}>Q{i.questionNumber}{i.selectedChoice}</li>)}
                    </ul>
                 </div>
                 <div>
                     <span>Actual corret option were:</span>
                     <ul>
-                        {listOfActualOption.map((i,k)=><li>Q{k}{i.correctOption}</li>)}
+                        {listOfActualOption.map((i,k)=><li key={k}>Q{k}{i.correctOption}</li>)}
                     </ul>
                 </div>
             </div>
